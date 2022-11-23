@@ -1,0 +1,25 @@
+:root{
+    background: pink;
+}
+
+
+
+#pageContainer{
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+img{
+    max-width: 75vw;
+    max-height: 75vh;
+}
+
+button{
+    margin-top: 2rem;
+    background: cadetblue;
+    padding: 2rem;
+    border-radius: 1rem;
+}
