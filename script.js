@@ -1,3 +1,11 @@
+  fetch('https://catfact.ninja/fact')
+  .then(response => response.json())
+  .then(results => {
+    console.log(results.fact)
+    document.querySelector('p').innerText = results.fact
+  })
+  .catch(error => console.error('error', error))
+
 function getCat(){
     fetch('https://api.thecatapi.com/v1/images/search')
     .then(res => res.json())
@@ -27,4 +35,19 @@ function changeCat(){
     .catch(error => console.error('error', error))
 }
 
-document.querySelector('button').addEventListener('click', changeCat)
+function changeCatPicture(){
+    fetch('https://catfact.ninja/fact')
+    .then(response => response.json())
+    .then(results => {
+      console.log(results.fact)
+      document.querySelector('p').innerText = results.fact
+    })
+    .catch(error => console.error('error', error))
+}
+
+function clickButton(){
+    changeCat()
+    changeCatPicture()
+}
+
+document.querySelector('button').addEventListener('click', clickButton)

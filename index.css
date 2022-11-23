@@ -12,6 +12,12 @@
     align-items: center;
 }
 
+p{
+    max-width: 50vw;
+    font-size: 1.8rem;
+    line-height: 2rem;
+}
+
 img{
     max-width: 75vw;
     max-height: 75vh;
@@ -19,7 +25,8 @@ img{
 
 button{
     margin-top: 2rem;
-    background: cadetblue;
+    font-size: 1rem;
+    background: lightskyblue;
     padding: 2rem;
     border-radius: 1rem;
 }
