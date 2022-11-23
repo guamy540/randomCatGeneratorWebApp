@@ -1,10 +1,12 @@
-  fetch('https://catfact.ninja/fact')
-  .then(response => response.json())
-  .then(results => {
-    console.log(results.fact)
-    document.querySelector('p').innerText = results.fact
-  })
-  .catch(error => console.error('error', error))
+//this function adds random fact usability. I don't like it though, but I'm
+//keeping the code just in case
+//   fetch('https://catfact.ninja/fact')
+//   .then(response => response.json())
+//   .then(results => {
+//     console.log(results.fact)
+//     document.querySelector('p').innerText = results.fact
+//   })
+//   .catch(error => console.error('error', error))
 
 function getCat(){
     fetch('https://api.thecatapi.com/v1/images/search')
@@ -35,19 +37,19 @@ function changeCat(){
     .catch(error => console.error('error', error))
 }
 
-function changeCatPicture(){
-    fetch('https://catfact.ninja/fact')
-    .then(response => response.json())
-    .then(results => {
-      console.log(results.fact)
-      document.querySelector('p').innerText = results.fact
-    })
-    .catch(error => console.error('error', error))
-}
+// function changeCatPicture(){
+//     fetch('https://catfact.ninja/fact')
+//     .then(response => response.json())
+//     .then(results => {
+//       console.log(results.fact)
+//       document.querySelector('p').innerText = results.fact
+//     })
+//     .catch(error => console.error('error', error))
+// }
 
 function clickButton(){
     changeCat()
-    changeCatPicture()
+//    changeCatPicture()
 }
 
 document.querySelector('button').addEventListener('click', clickButton)
